@@ -1,7 +1,7 @@
 ARG PORT TOKEN
 FROM gitpod/openvscode-server:latest
 USER root
-RUN apt-get install -y openssl
+RUN apt-get install -y openssl build-essential cargo 
 USER openvscode-server
 ENV OPENVSCODE_SERVER_ROOT=${OPENVSCODE_SERVER_ROOT}
 ENV TOKEN=${TOKEN}
