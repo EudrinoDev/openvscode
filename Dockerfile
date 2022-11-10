@@ -3,7 +3,7 @@ FROM gitpod/openvscode-server:latest
 USER root
 RUN apt-get install -y openssl
 RUN apt-get update -y
-RUN apt-get install build-essential cargo 
+RUN apt-get --assume-yes install build-essential cargo 
 USER openvscode-server
 ENV OPENVSCODE_SERVER_ROOT=${OPENVSCODE_SERVER_ROOT}
 ENV TOKEN=${TOKEN}
