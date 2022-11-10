@@ -4,9 +4,9 @@ USER root
 RUN apt-get install -y openssl
 RUN apt-get update -y
 RUN apt-get --assume-yes install build-essential rust-src cargo
-RUN git clone https://github.com/EudrinoDev/cargo-template.git
 USER openvscode-server
-ENV OPENVSCODE_SERVER_ROOT=${OPENVSCODE_SERVER_ROOT}
+RUN git clone https://github.com/EudrinoDev/cargo-template.git
+ENV OPENVSCODE_SERVER_ROOT=/home/cargo-template
 ENV TOKEN=${TOKEN}
 ENV PORT=${PORT}
 ADD start.sh /_railway/start.sh
