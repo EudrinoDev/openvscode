@@ -1,5 +1,5 @@
 ARG PORT TOKEN
-FROM gitpod/openvscode-server:latest
+FROM gitpod/openvscode-server:1.70.0
 USER root
 RUN apt-get install -y openssl
 RUN apt-get update -y
