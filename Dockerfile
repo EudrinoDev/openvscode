@@ -2,8 +2,8 @@ ARG PORT TOKEN
 FROM gitpod/openvscode-server:latest
 USER root
 RUN apt-get install -y openssl
-USER openvscode-server
 RUN apt-get update -y
+USER openvscode-server
 RUN apt-get --assume-yes install build-essential
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 RUN git clone https://github.com/EudrinoDev/cargo-template.git
